@@ -16,11 +16,9 @@ td {
 a {
   text-decoration: none;
   transition: 0.2s ease;
-}
-td:nth-child(5) > a {
   color: #3f75c5;
 }
-td:nth-child(6) > a {
+td:nth-child(7) > a {
   color: #c22a2a;
 }
 a:hover {

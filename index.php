@@ -18,6 +18,7 @@
       <th>Название</th>
       <th>Цена</th>
       <th>Описание</th>
+      <th>&#9672;</th>
       <th>&#9998;</th>
       <th>&#10006;</th>
     </tr>
@@ -32,8 +33,9 @@
             <td><?= $product[1] ?></td>
             <td><?= $product[2] ?></td>
             <td><?= $product[3] ?></td> 
+            <td><a href="product.php?id=<?= $product[0] ?>">Просмотр</a></td>
             <td><a href="update.php?id=<?= $product[0] ?>">Обновить</a></td>
-            <td><a href="vendor/delete.php?id=<?= $product[0] ?>">Удалить</a></td>
+            <td><a href="vendor/delete.php?id=<?= $product[0] ?>">Удалить</a></td> 
           </tr>
         <?php
       }

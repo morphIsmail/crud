@@ -1,11 +1,9 @@
 <?php
-
-require_once 'config/connect.php';
-$product_id = $_GET['id'];
-$product = mysqli_query($connect, "SELECT * FROM `items` WHERE `id`='$product_id'");
-$product = mysqli_fetch_assoc($product);
-//print_r($product);
-
+  require_once 'config/connect.php';
+  $product_id = $_GET['id'];
+  $product = mysqli_query($connect, "SELECT * FROM `items` WHERE `id`='$product_id'");
+  $product = mysqli_fetch_assoc($product);
+  //print_r($product);
 ?>
 
 <!DOCTYPE html>
@@ -18,6 +16,10 @@ $product = mysqli_fetch_assoc($product);
   <title>Обновление товара</title>
 </head>
 <body>
+
+  <a href="/">Главная</a>
+  <hr>
+
   <h2>Обновить товар</h2>
   <form action="vendor/update.php" method="post">
     <input type="hidden" name="id" value="<?= $product['id'] ?>">
@@ -29,5 +31,6 @@ $product = mysqli_fetch_assoc($product);
     <input type="number" name="price" value="<?= $product['price'] ?>">
     <button type="submit">Обновить</button>
   </form>
+  
 </body>
 </html>
